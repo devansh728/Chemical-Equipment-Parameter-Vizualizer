@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 26% 14%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 24% 18%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 24% 18%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 189 94% 43%;
+    --primary-foreground: 220 26% 14%;
+
+    --secondary: 220 20% 25%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 18% 22%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 24 95% 53%;
+    --accent-foreground: 220 26% 14%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 18% 25%;
+    --input: 220 18% 25%;
+    --ring: 189 94% 43%;
+
+    --radius: 0.75rem;
+
+    --chart-1: 189 94% 43%;
+    --chart-2: 24 95% 53%;
+    --chart-3: 142 71% 45%;
+    --chart-4: 271 91% 65%;
+    --chart-5: 41 96% 58%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(189 94% 43%), hsl(189 94% 53%));
+    --gradient-accent: linear-gradient(135deg, hsl(24 95% 53%), hsl(24 95% 63%));
+    --shadow-glow: 0 0 40px hsl(189 94% 43% / 0.3);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 220 26% 14%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 24% 18%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 24% 18%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 189 94% 43%;
+    --primary-foreground: 220 26% 14%;
+
+    --secondary: 220 20% 25%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 18% 22%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 24 95% 53%;
+    --accent-foreground: 220 26% 14%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 18% 25%;
+    --input: 220 18% 25%;
+    --ring: 189 94% 43%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  canvas {
+    display: block;
+  }
+}
+
+@layer utilities {
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+}
