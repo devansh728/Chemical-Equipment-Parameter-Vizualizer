@@ -10,25 +10,30 @@
 
 ## full Backend
 
+```
 - cd chemical_visualizer 
 - python -m venv venv
 - venv/Scripts/Activate
 - docker compose up --build
+```
 
 ## full frontend
 
+```
 - cd chemical_visualizer_frontend 
 - npm install 
 - npm run dev
+```
 
 ## full desktop app
 
+```
 - cd desktop_app
 - python -m venv venv
 - venv/Scripts/Activate
 - pip install -r requirements.txt
 - python main.py
-
+```
 
 
 
